@@ -1,11 +1,27 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "./Header";
+import { validateData } from "../utils/validate";
 
 const Login = () => {
   const [isSign, setIsSign] = useState(true);
+  const [errorMsg, setErrorMsg] = useState(null);
 
   const toggleSigninSingup = () => {
     setIsSign(!isSign);
+  };
+
+  const email = useRef();
+  const password = useRef();
+  const name = useRef();
+
+  const handleButtonClick = () => {
+    const nameValue = name?.current?.value;
+    const message = validateData(
+      email?.current?.value,
+      password?.current?.value,
+      isSign ? null : nameValue
+    );
+    setErrorMsg(message);
   };
 
   return (
@@ -18,30 +34,41 @@ const Login = () => {
         />
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
       </div>
-      <form className="bg-black absolute w-4/12 mx-auto p-10 my-36 right-0 left-0 text-white ">
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="bg-black absolute w-4/12 mx-auto p-10 my-36 right-0 left-0 text-white "
+      >
         <h1 className="font-bold text-3xl m-2">
           {isSign ? "Sign In" : "Sign Up"}
         </h1>
         {!isSign && (
           <input
+            ref={name}
             type="text"
             placeholder="Enter Full Name"
             className="p-3 m-2 w-full  bg-gray-600 rounded"
           />
         )}
         <input
+          ref={email}
           type="text"
           placeholder="Enter Email/Phone"
           className="p-3 m-2 w-full  bg-gray-600 rounded"
         />
         <input
+          ref={password}
           type="password"
           name="password"
           placeholder="Enter Password"
           className="p-3 m-2 w-full bg-gray-600 rounded"
         />
-
-        <button className="p-2 m-2  my-4 w-full bg-red-600 rounded">
+        {errorMsg && (
+          <p className="p-3 m-2 text-red-700 text-bold">{errorMsg}</p>
+        )}
+        <button
+          className="p-2 m-2  my-4 w-full bg-red-600 rounded"
+          onClick={handleButtonClick}
+        >
           {isSign ? "Sign In" : "Sign Up"}
         </button>
         {isSign && (
@@ -62,5 +89,4 @@ const Login = () => {
     </div>
   );
 };
-
 export default Login;
