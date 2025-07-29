@@ -15,7 +15,18 @@
 12.By consuming createUser and sigUpUser firebase APIs to create the users and signup the users and used updateProfile api also to update the name of the user 
 13.by using useDispatch we dispatched the user details to our slice 
 14.Added the useNavigate Hook to navigate to browse page after immediate signUp or signIn 
-15.In Header component subscribe (useSelector()) the store to display the signOut button based on the user null condition  
+15.In Header component subscribe (useSelector()) the store to display the signOut button based on the user null condition 
+16.we can not access the browse page without login and afterlogin cannot goto login page adde that in authcahnge for proper behaviour of application 
+17.Unsubscribe to the auth change after the components unmounts 
+18.Created the accont in TMDB for APIs 
+19.Consumed the nowPlayingMovieLists API 
+20.Created the slice of movies and added the nowPlayingMovies data to that slice by using dispatch function (addNowPlayingMovies)
+21.Created the Maincontainer and Secondarycontainer and Videotitle and Videobackground components and renderd accordingly 
+22.By using nowPlayingMovies data took the first element and took the title and overview and id to pass it to child components 
+23.Designed the Videotitle component and make it absolute to float on the Videobackground component 
+24.Took the VIDEOS API to display the trailer on the Videobackground component and utilized the api and passed the movieId to it 
+25.Created the reducerFunction to add the videos list to moviesSlice and utilized the key of the data and passed into EMBEDED of the iframe  
+26.Make the iframe autoplay and mute
 
 # Features
 Login/Sign Up
@@ -30,4 +41,6 @@ Browse(after authentication)
 NetflixGPT
     SearchBar
     MovieSuggestions
+
+    
  
