@@ -10,6 +10,7 @@ const useNowPlayingMovies = () => {
     useEffect(() => {
         getNowPlayingMovies();
     }, []);
+
     const getNowPlayingMovies = async () => {
         const URL =
             "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";

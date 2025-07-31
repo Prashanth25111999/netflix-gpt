@@ -26,7 +26,12 @@
 23.Designed the Videotitle component and make it absolute to float on the Videobackground component 
 24.Took the VIDEOS API to display the trailer on the Videobackground component and utilized the api and passed the movieId to it 
 25.Created the reducerFunction to add the videos list to moviesSlice and utilized the key of the data and passed into EMBEDED of the iframe  
-26.Make the iframe autoplay and mute
+26.Make the iframe autoplay and mute.
+27.Completed the Secondary component functinality 
+28.Inside secondary component created the menulist component to show the list of menus
+29.inside menulist rendered the menucard component to show the movies card and make that floting on     trailer 
+30.Created the taprated and upcoming and trending videos reducer function inside movieslice and dispatched the action after the respective api calls 
+
 
 # Features
 Login/Sign Up
