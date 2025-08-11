@@ -10,7 +10,7 @@
 7.Created the Sign Up and Sign In form and toggled based on state changes onClick
 8.Created handleButton function to handle the validate logic and created separate validate function in utils and by using REGEX and test() handled validate 
 9.Used the useRef() hook (Used to get the input values of the input tags) to get the input fields value and passed it in the validate function.
-10.Login In to google firebase and created the project and then installed the firebase pakage in vscode and login to firebase in vscode and init that and slected the options and build the project and  deployed 
+10.Login In to google firebase and created the project and then installed the firebase package in vscode and login to firebase in vscode and init that and slected the options and build the project and  deployed 
 11.Created the Redux-Store to store the usr data and created the slice and provided that slice in our store and provided our store in app to access the user data all other child components of app
 12.By consuming createUser and sigUpUser firebase APIs to create the users and signup the users and used updateProfile api also to update the name of the user 
 13.by using useDispatch we dispatched the user details to our slice 
@@ -31,6 +31,15 @@
 28.Inside secondary component created the menulist component to show the list of menus
 29.inside menulist rendered the menucard component to show the movies card and make that floting on     trailer 
 30.Created the taprated and upcoming and trending videos reducer function inside movieslice and dispatched the action after the respective api calls 
+31.Created the Button in header for trvers to gpt search page and netflix home page 
+32.Created the search page and rendered the searchbar and gptmoviesuggestion pages inside it 
+33.Created the searchbar and button inside the searchbar component 
+# Bounus 
+34.Implemented the multilanguage functionality in gpt searchbar component.
+35.Craeted the language constants and added the text which we need to convert 
+36.Craeted the constants languageIdentifiers in constants file and traversed by using map in select tag
+37.Craeted the  langConfigSlice toadd the initial language and written the onchange function in select based on the selected language it will reflect in UI 
+
 
 
 # Features

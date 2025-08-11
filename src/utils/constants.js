@@ -9,3 +9,5 @@ export const OPTIONS = {
     }
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w780"
+
+export const LANGUAGE_IDENTIFIER = [{ identifier: "en", name: "English" }, { identifier: "hindi", name: "Hindi" }, { identifier: "spanish", name: "Spanish" }]
