@@ -5,9 +5,11 @@ export const OPTIONS = {
     method: 'GET',
     headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkMGViNWRhODYzZDA4OGQyYmFmOGZlZjkyYjk4Yjg0MSIsIm5iZiI6MTc1MzQzNTEwMy4zNTEsInN1YiI6IjY4ODM0YmRmMDQ5OTlhZjNkNDUyYTNlZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.H0vMlLwieNdNCw19AVusmtkMzpiveziFOffRx4ZLKFQ'
+        Authorization: 'Bearer ' + process.env.REACT_APP_TMDB_KEY
     }
 };
 export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w780"
 
 export const LANGUAGE_IDENTIFIER = [{ identifier: "en", name: "English" }, { identifier: "hindi", name: "Hindi" }, { identifier: "spanish", name: "Spanish" }]
+
+export const OPENAI_KEY = process.env.REACT_APP_GPT_KEY

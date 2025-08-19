@@ -39,7 +39,18 @@
 35.Craeted the language constants and added the text which we need to convert 
 36.Craeted the constants languageIdentifiers in constants file and traversed by using map in select tag
 37.Craeted the  langConfigSlice toadd the initial language and written the onchange function in select based on the selected language it will reflect in UI 
-
+38.Taken openAI api to get the dynamic results and passed the input query by using the useref hook and taken the movieLists and passed to tmdbAPI to (returning Promise because we are passing array of movielists  const data = gptQueryResults?.map((movie, index) =>
+                fetchSearchMovies(movie)
+            );
+            console.log(data);
+            const tmdbResults = await Promise.all(data);
+            console.log(tmdbResults);)
+ display the data in ui before that created the action in gptslice and added the both movienames and movie results to that.
+ 39.to convert array of array into single array we need to use 
+ const res = tmdbResults.flatMap((item)=>item)
+ 40.Created the .env file to place our secreate keys and we will  ot pushed to git also and while storing we need to use REACT_APP_KEYNAME (While using this add process.env.REACT_APP_KEYNAME)
+ 41.Avoided the multiple api calls when we are using RTK (if we initialized with empty array need to check the length === 0 then call api if we initialized to null that state && call the api) this process is known as memoization it will avoid the api calls unnecessarily
+ 42.Added the responsiveness to the Netflix-GPT site 
 
 
 # Features
@@ -55,6 +66,3 @@ Browse(after authentication)
 NetflixGPT
     SearchBar
     MovieSuggestions
-
-    
- 

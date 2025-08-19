@@ -53,14 +53,15 @@ const Header = () => {
   };
 
   const handleLanguage = (e) => {
+    console.log(e.target.value);
     dispatch(addLanguage(e.target.value));
   };
 
   return (
-    <div className="absolute bg-gradient-to-b from-black z-10 w-screen flex justify-between ">
-      <img src={HEADER_LOGO} alt="Header Logo" className="w-48 ml-24 my-1 " />
+    <div className="absolute bg-gradient-to-b from-black z-10 w-screen flex  md:flex-row flex-col justify-between ">
+      <img src={HEADER_LOGO} alt="Header Logo" className="w-48 ml-24 my-1  " />
       {!hideLocation && name && (
-        <div className="flex p-2 mr-5">
+        <div className="flex p-2 mr-5 justify-center">
           {isGptSearch && (
             <select className="my-5 mr-2 px-2" onChange={handleLanguage}>
               {LANGUAGE_IDENTIFIER.map((identifier) => (
